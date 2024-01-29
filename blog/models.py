@@ -27,16 +27,57 @@ class Entry(models.Model):
     status = models.CharField(choices=STATUS_SET, default=STATUS_DRAFT, max_length=8)
     author = models.ForeignKey(User, related_name='entries', on_delete=models.CASCADE)
 
-class ToDoList(models.Model):
+class Class(models.Model):
     name = models.CharField(max_length=200)
     
     def __str__(self):
         return self.name
 
-class Item(models.Model):
-    todolist = models.ForeignKey(ToDoList, on_delete=models.CASCADE)
-    text = models.CharField(max_length=300)
-    complete = models.BooleanField()
+class row_1(models.Model):
+    Class = models.ForeignKey(Class, on_delete=models.CASCADE)
+    text = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.text
+
+class row_2(models.Model):
+    Class = models.ForeignKey(Class, on_delete=models.CASCADE)
+    text = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.text
+
+class row_3(models.Model):
+    Class = models.ForeignKey(Class, on_delete=models.CASCADE)
+    text = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.text
+
+class row_4(models.Model):
+    Class = models.ForeignKey(Class, on_delete=models.CASCADE)
+    text = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.text
+
+class row_5(models.Model):
+    Class = models.ForeignKey(Class, on_delete=models.CASCADE)
+    text = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.text
+
+class row_6(models.Model):
+    Class = models.ForeignKey(Class, on_delete=models.CASCADE)
+    text = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.text
+
+class row_7(models.Model):
+    Class = models.ForeignKey(Class, on_delete=models.CASCADE)
+    text = models.CharField(max_length=50)
 
     def __str__(self):
         return self.text

@@ -11,6 +11,7 @@ router.register(r'users', UserViewSet)
 router.register(r'entries', EntryViewSet)
 
 urlpatterns = [
-    path("<str:name>", views.index, name="index"),
-    path("sr/", views.v1, name="view 1"),
+    path("", views.index, name="index"),
+    path('add/', views.AddView, name='add'),
+    path("sr/", views.v1, name="search"),
 ]
